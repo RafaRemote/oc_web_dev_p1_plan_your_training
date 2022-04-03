@@ -1,0 +1,169 @@
+
+
+* {
+ 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family:  Arial, Helvetica, sans-serif;
+    background-image: url("images/bg_tiles_gray.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 100%;
+    
+    
+}
+
+.buttono {
+
+    font-family: "karma_arcade", Arial, Helvetica, sans-serif;
+    background: #a787f0;
+    min-width: 300px;
+    max-width: 400px;
+    min-height: auto;
+    
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px black;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    line-height: 1.6;
+    
+    text-align: center;
+    box-shadow: 0px 0px 3px black;
+    padding: 10px;
+    color: white;
+    
+
+}
+
+#choose {
+    margin: auto;
+    padding-top: 20px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+    font-weight: bold;
+    
+    min-width: 300px ;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    padding-bottom: 1em;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#selection {
+    
+    
+    width: 50vw;
+    
+    margin: auto;
+    display: flex;
+    flex: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+
+}
+
+footer {
+    margin-top: 3em;
+font-size: 0.5em;
+text-align: center;
+width: 200px;
+
+color: white;
+}
+
+header {
+    margin-top: 2em;
+    min-width: 300px;
+    max-width: 400px;
+    margin: auto;
+    background: #a787f0;
+    color: white;
+    
+    
+    text-align: center;
+    border-radius: 10px;
+    
+    font-weight: bold;
+    border: 2px solid black;
+    box-shadow: 0px 0px 3px black;
+    font-size: 2em;
+    
+    
+}
+
+#id {
+    font-size: 0.5em;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+
+p{
+    margin-top: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+i {
+    
+    font-size: 4em;
+    animation-name: move_up_and_down0;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    color: white;
+    
+    
+}
+
+@keyframes move_up_and_down {
+    0% {transform: rotate(10deg);}
+    50% { transform: rotate(-10deg);}
+    100% {transform: rotate(10deg);}
+}
+
+.fa-infinity {
+    
+    color: white;
+}
+
+.fa-arrow-alt-circle-down {
+    color: orange;
+}
+
+#cycle {
+    background: lightgreen;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    min-width: 150px;
+    max-width: 200px;
+    font-size: 1em;
+}
+
+#oc {
+
+    text-decoration: underline;
+    font-style: italic;
+}

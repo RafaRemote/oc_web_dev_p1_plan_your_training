@@ -1,0 +1,115 @@
+html, body {
+    font-family: Arial, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    background-image: url("../images/bg_tiles_gray.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    
+}
+
+header {
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;;
+    border-radius: 20px 20px 0px 0px;
+    z-index: 1;
+    background-color: white;
+}
+
+#header_ {
+
+    width: 50vw;
+}
+
+aside {
+    
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+    text-align: right;
+    
+    
+}
+
+#presentation, #interest {
+    text-align: justify;
+
+}
+
+#brand {
+    font-style: italic;
+    font-weight: bold;
+}
+
+section {
+    padding: 10px;
+    border: 1px solid black;
+    border-top: none;
+    z-index:1;
+    background-color: white;;
+}
+
+button {
+    background-color: #1c56ac;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+#times {
+    background-color: transparent;
+    border: none;
+    color: black;
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
+
+#logo {
+    display: block;
+    padding-top: 100px;
+    
+}
+
+
+table {
+
+    border-collapse: collapse;
+    
+    
+    
+    
+}
+
+ tr, td {
+     padding: 3px;
+    
+    
+    
+}
+
+tr:nth-child(even) {
+    
+
+}
+
+img {
+
+    width: 150px;
+    height: 100px;
+}
+
+.fa-laptop-code {
+    transform: scale(6);
+    position: relative;
+    left: -5em;
+    top: 12em;
+    color: black;
+
+}
