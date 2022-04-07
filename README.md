@@ -8,4 +8,6 @@ Skills:
 - develop a personalized learning plan
 - select relevant sources for a technology watch
 
-3rd april 2022: links will be soon updated
+
+
+🔗 https://rafaremote.github.io/oc_web_dev_p1_plan_your_training/
