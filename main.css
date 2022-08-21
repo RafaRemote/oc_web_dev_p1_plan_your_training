@@ -1,22 +1,14 @@
-@font-face {
-    font-family: "karma_arcade";
-    src:url("fonts/karma/karma-webfont.eot");
-    src:url("fonts/karma/karma-webfont.svg");
-    src:url("fonts/karma/karma-webfont.ttf");
-    src:url("fonts/karma/karma-webfont.woff");
-    src:url("fonts/karma/karma-webfont.woff2");
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     word-break: keep-all;
+    text-shadow: 0px 0px 2px black;
 }
 
 html, body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("images/bg_tiles_gray.png");
+    background-image: url("images/carbon.png");
     background-size: cover;
     background-repeat: repeat;
     font-size: 100%;
@@ -123,7 +115,6 @@ html, body {
 
     html, body {
         font-family: Arial, Helvetica, sans-serif;
-        background-image: url("images/carbon.png");
         background-size: cover;
         background-repeat: no-repeat;
         font-size: 100%;
@@ -168,7 +159,6 @@ html, body {
     }
 
     .choix {
-        font-family: Arial, Helvetica, sans-serif;
         background: radial-gradient(circle, rgba(133,133,145,1) 0%, rgba(42,42,64,1) 100%);
         width: 80vw;
         height: 20vh;
@@ -285,7 +275,6 @@ html, body {
 
     html, body {
         font-family: Arial, Helvetica, sans-serif;
-        background-image: url("images/carbon.png");
         background-size: cover;
         background-repeat: no-repeat;
         font-size: 100%;
@@ -340,7 +329,6 @@ html, body {
     }
 
     .choix {
-        font-family: Arial, Helvetica, sans-serif;
         background: radial-gradient(circle, rgba(133,133,145,1) 0%, rgba(42,42,64,1) 100%);
         width: 30vw;
         height: 20vh;
