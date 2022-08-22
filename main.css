@@ -31,6 +31,10 @@ header {
 p {
     margin-top: 1em;}
 
+
+ul.dropdown-menu a:hover {
+    color: #fff !important;}
+
 #contacts {
     display: flex;
     justify-content: space-evenly;
@@ -41,6 +45,10 @@ p {
     width: 48px;
     border-radius: 5px;
     background: #000 center/cover url("assets/images/logo_rr.jpg") no-repeat;
+}
+
+#profil_photo:hover {
+    box-shadow: 0px 0px 0px 5px white;
 }
 
 .center {
@@ -64,6 +72,21 @@ p {
     margin: auto;
     text-align: center;
 }
+
+.shake {
+    animation: shake-animation 2s ease infinite;
+    transform-origin: 12.5% 12.5%;
+  }
+  @keyframes shake-animation {
+    0% { transform:translate(0,0) }
+    1.78571% { transform:translate(5px,0) }
+    3.57143% { transform:translate(0,0) }
+    5.35714% { transform:translate(5px,0) }
+    7.14286% { transform:translate(0,0) }
+    8.92857% { transform:translate(5px,0) }
+    10.71429% { transform:translate(0,0) }
+    100% { transform:translate(0,0) }
+  }
 
 .title {
     background: radial-gradient(circle, rgba(133,133,145,1) 0%, rgba(42,42,64,1) 100%);
