@@ -1,12 +1,10 @@
 html, body {
     font-family: Arial, Geneva, Verdana, sans-serif;
     padding: 10px;
-    background-image: url("../images/bg_tiles_gray.png");
+    background-image: url("../assets/images/carbon.png");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 0;
-
-    
 }
 
 header {
@@ -16,29 +14,27 @@ header {
     justify-content: space-between;;
     border-radius: 20px 20px 0px 0px;
     z-index: 1;
-    background-color: white;
+    background-color: rgba(256,256,256,.95);
 }
 
-#header_ {
+/* #header_ {
 
     width: 50vw;
-}
+} */
 
 aside {
-    
-    position: absolute;
+    position: relative;
     display: block;
-    right: 10px;
-    top: 10px;
-    padding: 10px;
     text-align: right;
-    
-    
 }
 
 #presentation, #interest {
     text-align: justify;
 
+}
+
+#realistic_wage {
+    font-weight: bold;
 }
 
 #brand {
@@ -79,25 +75,15 @@ button {
 
 
 table {
-
     border-collapse: collapse;
-    
-    
-    
-    
 }
 
  tr, td {
      padding: 3px;
     
     
-    
 }
 
-tr:nth-child(even) {
-    
-
-}
 
 img {
 
@@ -106,10 +92,20 @@ img {
 }
 
 .fa-laptop-code {
-    transform: scale(6);
+    transform: scale(3);
     position: relative;
     left: -5em;
     top: 12em;
     color: black;
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        width: 50vw;
+        margin: auto;
+    }
 
 }

@@ -2,17 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    word-break: keep-all;
+    /* word-break: keep-all; */
     color: white;
-    text-shadow: 0px 0px 1px white;}
+    }
 
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("assets/images/carbon.png");
     background-size: cover;
-    background-repeat: repeat;}
+    background-repeat: repeat;
+    text-shadow: 2px 2px 0px black;
+}
+
 
 a {
+    color: white;
     text-decoration: none;}
 
 nav {
@@ -65,12 +69,9 @@ ul.dropdown-menu a:hover {
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
-}
-
-.selection {
-    width: 100vw;
-    margin: auto;
-    text-align: center;
+    padding-bottom: 20vh;
+    margin-top: -5vh;
+    z-index: 0;
 }
 
 .shake {
@@ -88,75 +89,128 @@ ul.dropdown-menu a:hover {
     100% { transform:translate(0,0) }
   }
 
+.menu >p:first-of-type {
+    font-size: 1.25em;
+    margin-bottom: 2em;
+}
+
+.menu_veille {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.menu_veille > div {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 1em 0em 1em 0em;
+    padding: 1em;
+    background-color: rgba(0,0,0,50%);
+
+}
+
+.menu_veille > div:last-of-type {
+    margin-bottom: 5em;
+}
+
+.menu_veille >div:first-of-type {
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.25em;
+}
+
+.underlined {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-shadow: none;
+}
+
 .title {
     background: radial-gradient(circle, rgba(133,133,145,1) 0%, rgba(42,42,64,1) 100%);
     width: 80vw;
-    height: 20vh;
-    margin: 1em auto;
+    height: 15vh;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 3px 3px black;
-    font-size: 1em;
     font-weight: bold;
     margin-bottom: 1em;
     display: flex;
     justify-content: center;
     align-items: center;}
 
-@media screen and (min-width: 768px) {
+footer {
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
 
-    header {
-        width: 30vw;
-        margin-left: 10vw;
-        text-align: center;
-    }
+.img:hover {
+    transform: scale(1.10);
+    transition: .3s
+}
 
-    p {
-        margin-top: 1em auto;
-    }
+@media only screen and (min-width: 768px) {
 
-    .choix {
-        background: radial-gradient(circle, rgba(133,133,145,1) 0%, rgba(42,42,64,1) 100%);
-        width: 30vw;
-        height: 20vh;
-        margin: 1em auto;
-        border: 1px solid black;
-        border-radius: 10px;
-        box-shadow: 3px 3px black;
-        font-size: 1em;
-        font-weight: bold;
-        margin-bottom: 1em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .selection {
-        width: 100vw; 
-        margin-top: 5vw;
-        text-align: center;
+    body {
+        font-size: 1.25em;
+        text-shadow: 3px 3px 0px black;}
     }
 
     .title {
-        background: radial-gradient(circle, rgba(133,133,145,1) 35%, rgba(42,42,64,1) 100%);
-        color: white;
-        text-shadow: 0px 0px 10px white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        text-align: center;
-        border-radius: 10px;
-        padding: 2em;
-        font-weight: bold;
-        border: 2px solid black;
-        box-shadow: 0px 0px 3px black;
-        font-size: 1.5em;
-        margin: 1em auto;
+        width: 40vw;
     }
 
-    a {
-        text-decoration: none;
-        color: white;
+    #day_composition {
+        display: flex;
+        align-items: center;
+        width: 80vw;
+        height: 50vh;
+        background-image: url("assets/images/day_composition.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: transparent;
+        border-radius: 10px;
+        margin: auto;
+        padding: 0;
+        background-color: transparent;
     }
-}
+    
+    #week_composition {
+        width: 80vw;
+        height: 20vh;
+        background-image: url("assets/images/week_composition.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: transparent;
+        border-radius: 10px;
+        padding: 0;
+        background-color: transparent;
+    }
+    
+    #projects_duration {
+        width: 80vw;
+        height: 50vh;
+        background-image: url("assets/images/projects_duration.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: transparent;
+        border-radius: 10px;
+        margin: 1em 1em 5em 1em;
+        padding: 0;
+        background-color: transparent;
+    }
