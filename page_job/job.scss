@@ -1,0 +1,101 @@
+@import '../css/variables';
+
+html, body {
+    font-family: Arial, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    background-image: $background-image;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+header {
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;;
+    border-radius: 20px 20px 0px 0px;
+    z-index: 1;
+    background-color: rgba(256,256,256,.95);
+}
+
+aside {
+    position: relative;
+    display: block;
+    text-align: right;
+}
+
+#presentation, #interest {
+    text-align: justify;
+}
+
+#realistic_wage {
+    font-weight: bold;
+}
+
+#brand {
+    font-style: italic;
+    font-weight: bold;
+}
+
+section {
+    padding: 10px;
+    border: 1px solid black;
+    border-top: none;
+    z-index:1;
+    background-color: $primary-color;
+}
+
+button {
+    background-color: #1c56ac;
+    color: $primary-color;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+#times {
+    background-color: transparent;
+    border: none;
+    color: black;
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
+
+#logo {
+    display: block;
+    padding-top: 100px;
+    
+}
+
+table {
+    border-collapse: collapse;
+}
+
+ tr, td {
+     padding: 3px;
+}
+
+img {
+
+    width: 150px;
+    height: 100px;
+}
+
+.fa-laptop-code {
+    transform: scale(3);
+    position: relative;
+    left: -5em;
+    top: 12em;
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        width: 50vw;
+        margin: auto;
+    }
+
+}
