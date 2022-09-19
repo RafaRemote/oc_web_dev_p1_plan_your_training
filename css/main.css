@@ -204,6 +204,11 @@ footer {
   transition: 0.3s;
 }
 
+@media only screen and (max-width: 567px) {
+  body {
+    font-size: 0.5rem;
+  }
+}
 @media only screen and (min-width: 768px) {
   body {
     font-size: 1.25em;
