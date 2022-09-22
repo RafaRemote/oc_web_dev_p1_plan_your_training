@@ -60,7 +60,6 @@ if (document.title == html_page_titles["job"]) {
         });
     }
 
-
 if (document.title == html_page_titles["plan"]) {
 
     // duration of the formation is 6 months, 180 days
@@ -73,7 +72,7 @@ if (document.title == html_page_titles["plan"]) {
         'Construire une application Web',
         'Construire une API sécurisée',
         'Construire un réseau social d\'entreprise'
-    ]
+    ];
     const bg_colors = [
         '#FF5733',
         '#E3FF33',
@@ -82,13 +81,13 @@ if (document.title == html_page_titles["plan"]) {
         '#3349FF',
         '#B233FF',
         '#FF33B5'
-    ]
+    ];
     const theor_durations = [6, 20, 25, 9, 25, 14, 14];
     tds_needed_days = document.getElementsByClassName("days_needed");
     for (i of tds_needed_days) {
         i.innerText = theor_durations[[...tds_needed_days].indexOf(i)]
-    }
-    sum_days = document.getElementsByClassName("sum_days_needed")
+    };
+    sum_days = document.getElementsByClassName("sum_days_needed");
     for (i of sum_days) {
         i.innerText = (theor_durations.reduce((a,b) => a+ b, 0)).toString();
         i.style.color = "rgba(100,0,256,1)";
@@ -112,7 +111,7 @@ if (document.title == html_page_titles["plan"]) {
                 label: 'Estimation du temps nécessaire',
                 data: theor_durations,
                 backgroundColor: bg_colors,
-                hoverOffset: 3
+                hoverOffset: 75
             }]
         },
         options: {
@@ -125,6 +124,7 @@ if (document.title == html_page_titles["plan"]) {
                     labels: {
                         color: 'white'
                     },
+
                     padding: 10
                 },
                 title: {
