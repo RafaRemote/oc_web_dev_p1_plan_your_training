@@ -7,9 +7,8 @@
 
 html, body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("../assets/images/carbon.png");
+  background-image: url("../assets/images/bg_seamless.png");
   background-size: cover;
-  background-repeat: repeat;
   text-shadow: 2px 2px 0px black;
 }
 
@@ -72,6 +71,10 @@ ul.dropdown-menu a:hover {
   padding-bottom: 20vh;
   margin-top: -5vh;
   z-index: 0;
+}
+
+#conclusion {
+  padding-bottom: 15vh;
 }
 
 .shake {
@@ -175,8 +178,8 @@ ul.dropdown-menu a:hover {
 
 .title {
   background: radial-gradient(circle, rgb(133, 133, 145) 0%, rgb(42, 42, 64) 100%);
-  width: 80vw;
-  height: 15vh;
+  width: 50vw;
+  height: 3em;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 3px 3px black;
@@ -199,9 +202,40 @@ footer {
   z-index: 1000;
 }
 
-.img:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
+.styled-table {
+  border: thin solid white;
+  margin: 25px auto;
+  text-shadow: none;
+  min-width: 400px;
+  margin-bottom: 10vh;
+}
+
+.styled-table thead tr {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.styled-table tbody tr:last-of-type {
+  background-color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+}
+
+.bars {
+  height: 800px;
 }
 
 @media only screen and (max-width: 567px) {
@@ -214,50 +248,9 @@ footer {
     font-size: 1.25em;
     text-shadow: 3px 3px 0px black;
   }
-}
-.title {
-  width: 40vw;
-}
-
-#day_composition {
-  display: flex;
-  align-items: center;
-  width: 80vw;
-  height: 50vh;
-  background-image: url("assets/images/day_composition.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: transparent;
-  border-radius: 10px;
-  margin: auto;
-  padding: 0;
-  background-color: transparent;
-}
-
-#week_composition {
-  width: 80vw;
-  height: 20vh;
-  background-image: url("assets/images/week_composition.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: transparent;
-  border-radius: 10px;
-  padding: 0;
-  background-color: transparent;
-}
-
-#projects_duration {
-  width: 80vw;
-  height: 50vh;
-  background-image: url("assets/images/projects_duration.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: transparent;
-  border-radius: 10px;
-  margin: 1em 1em 5em 1em;
-  padding: 0;
-  background-color: transparent;
+  #canvas-wrapper {
+    margin: auto;
+    width: 80vw;
+    height: 50vh;
+  }
 }/*# sourceMappingURL=main.css.map */

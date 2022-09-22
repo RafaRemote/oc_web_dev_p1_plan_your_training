@@ -12,7 +12,7 @@ html, body {
     font-family: $fonts;
     background-image: $background-image;
     background-size: cover;
-    background-repeat: repeat;
+    // background-repeat: no-repeat;
     text-shadow: 2px 2px 0px black;
 }
 
@@ -77,6 +77,10 @@ ul.dropdown-menu a:hover {
     z-index: 0;
 }
 
+#conclusion {
+    padding-bottom: 15vh;
+}
+
 .shake {
     animation: shake-animation 2s ease infinite;
     transform-origin: 12.5% 12.5%;
@@ -115,7 +119,6 @@ ul.dropdown-menu a:hover {
     margin: 1em 0em 1em 0em;
     padding: 1em;
     background-color: rgba(0,0,0,50%);
-
 }
 
 .menu_veille > div:last-of-type {
@@ -136,8 +139,8 @@ ul.dropdown-menu a:hover {
 
 .title {
     background: radial-gradient(circle, rgba(133,133,145,1) 0%, rgba(42,42,64,1) 100%);
-    width: 80vw;
-    height: 15vh;
+    width: 50vw;
+    height: 3em;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 3px 3px black;
@@ -158,11 +161,41 @@ footer {
     z-index: 1000;
 }
 
-.img:hover {
-    transform: scale(1.10);
-    transition: .3s
+.styled-table {
+    border: thin solid white;
+    margin: 25px auto;
+    text-shadow: none;
+    min-width: 400px;
+    margin-bottom: 10vh;
 }
 
+.styled-table thead tr {
+    background-color: rgba(0,0,0,50%);
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: rgba(0,0,0,50%);
+}
+
+.styled-table tbody tr:last-of-type {
+    background-color: rgba(0,0,0,90%);
+    font-weight: bold;
+}
+
+.bars {
+    height: 800px;
+}
 @media only screen and (max-width: 567px) {
 
     body {
@@ -174,52 +207,16 @@ footer {
 
     body {
         font-size: 1.25em;
-        text-shadow: 3px 3px 0px black;}
+        text-shadow: 3px 3px 0px black;
     }
 
-    .title {
-        width: 40vw;
-    }
-
-    #day_composition {
-        display: flex;
-        align-items: center;
-        width: 80vw;
-        height: 50vh;
-        background-image: url("assets/images/day_composition.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        border: transparent;
-        border-radius: 10px;
+    #canvas-wrapper {
         margin: auto;
-        padding: 0;
-        background-color: transparent;
-    }
-    
-    #week_composition {
-        width: 80vw;
-        height: 20vh;
-        background-image: url("assets/images/week_composition.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        border: transparent;
-        border-radius: 10px;
-        padding: 0;
-        background-color: transparent;
-    }
-    
-    #projects_duration {
         width: 80vw;
         height: 50vh;
-        background-image: url("assets/images/projects_duration.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        border: transparent;
-        border-radius: 10px;
-        margin: 1em 1em 5em 1em;
-        padding: 0;
-        background-color: transparent;
     }
+
+}
+
+
+
