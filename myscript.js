@@ -125,7 +125,6 @@ if (document.title == html_page_titles["plan"]) {
                     labels: {
                         color: 'white'
                     },
-  
                     padding: 10
                 },
                 title: {
