@@ -204,7 +204,7 @@ ul.dropdown-menu a:hover {
 
 .underlined {
   text-decoration: underline;
-  text-underline-offset: 6px;
+  text-underline-offset: 3px;
   -webkit-text-decoration-color: white;
           text-decoration-color: white;
   text-shadow: none;

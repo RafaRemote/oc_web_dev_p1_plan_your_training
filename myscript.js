@@ -157,7 +157,7 @@ if (document.title == html_page_titles["plan"]) {
     var next_mon = document.getElementById("next_monday");
     next_mon.innerText = next_monday_string;
 
-    today_string = new Date().toLocaleDateString();
+    today_string = new Date().toLocaleDateString("fr-FR");
     today = document.getElementById('today');
     today.innerText = today_string;
     valid_monday = [next_monday_year, next_monday_month, next_monday_num].join("-");
@@ -182,13 +182,13 @@ if (document.title == html_page_titles["plan"]) {
 
     theorical_end = document.getElementById('theorical-end');
     theorical_end_obj = n.addDays(training_length-1);
-    theorical_end.innerText = theorical_end_obj.toLocaleDateString();
+    theorical_end.innerText = theorical_end_obj.toLocaleDateString("fr-FR");
     theorical_end.style.color = "red";
     theorical_end.style.fontWeight = "bold";
 
     evaluated_end = document.getElementById('evaluated-end');
     evaluated_end_obj = n.addDays(progression_plus_we.slice(-1)[0]-1);
-    evaluated_end.innerText = evaluated_end_obj.toLocaleDateString();
+    evaluated_end.innerText = evaluated_end_obj.toLocaleDateString("fr-FR");
     evaluated_end.style.color = "rgba(0, 256, 0, 1)";
     evaluated_end.style.fontWeight = "bold";
 
