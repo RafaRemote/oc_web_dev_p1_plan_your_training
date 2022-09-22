@@ -121,7 +121,7 @@ ul.dropdown-menu a:hover {
     border-radius: 5px;
     margin: 1em 0em 1em 0em;
     padding: 1em;
-    background-color: rgba(0,0,0,50%);
+    background-color: rgba(0,0,0,80%);
 }
 
 .menu_veille > div:last-of-type {
@@ -164,6 +164,13 @@ footer {
     z-index: 1000;
 }
 
+.bg-black-80 {
+    background-color: rgba(0,0,0,80%);
+    padding: 1em;
+    margin: 2em;
+    border-radius: 10px;
+}
+
 .styled-table {
     border: thin solid white;
     margin: 25px auto;
@@ -173,7 +180,7 @@ footer {
 }
 
 .styled-table thead tr {
-    background-color: rgba(0,0,0,50%);
+    background-color: rgba(0,0,0,80%);
     color: #ffffff;
     text-align: left;
 }
@@ -188,7 +195,7 @@ footer {
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: rgba(0,0,0,50%);
+    background-color: rgba(0,0,0,80%);
 }
 
 .styled-table tbody tr:last-of-type {

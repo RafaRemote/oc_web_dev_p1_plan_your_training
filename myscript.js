@@ -147,7 +147,7 @@ if (document.title == html_page_titles["plan"]) {
     if (window.innerWidth > 701) {
         myChart.options.plugins.legend.position = 'right';
         myChart.options.plugins.legend.align = 'center';
-    }
+    };
 
     var next_monday = new Date();
     var next_monday_base =  (next_monday.getDate() + (((1 + 7 - next_monday.getDay()) % 7) || 7));
@@ -192,15 +192,11 @@ if (document.title == html_page_titles["plan"]) {
     evaluated_end.innerText = evaluated_end_obj.toLocaleDateString();
     evaluated_end.style.color = "rgba(0, 256, 0, 1)";
     evaluated_end.style.fontWeight = "bold";
-    
-
 
     reliquat = document.getElementById('diff_theorical_needed');
     reliquat_amount = 180 - progression_plus_we.slice(-1);
     reliquat.innerText = reliquat_amount;
     reliquat.style.color = "rgba(0,256,0,1)";
     reliquat.style.fontWeight = "bold";
-
-    console.log(window.innerWidth)
 
 }
