@@ -74,7 +74,10 @@ ul.dropdown-menu a:hover {
 }
 
 #conclusion {
-  padding-bottom: 15vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 15vh;
 }
 
 .shake {
@@ -206,7 +209,6 @@ footer {
   border: thin solid white;
   margin: 25px auto;
   text-shadow: none;
-  min-width: 400px;
   margin-bottom: 10vh;
 }
 
@@ -218,7 +220,7 @@ footer {
 
 .styled-table th,
 .styled-table td {
-  padding: 12px 15px;
+  padding: 0.5rem;
 }
 
 .styled-table tbody tr {
@@ -247,10 +249,5 @@ footer {
   body {
     font-size: 1.25em;
     text-shadow: 3px 3px 0px black;
-  }
-  #canvas-wrapper {
-    margin: auto;
-    width: 80vw;
-    height: 50vh;
   }
 }/*# sourceMappingURL=main.css.map */

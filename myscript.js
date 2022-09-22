@@ -62,6 +62,7 @@ if (document.title == html_page_titles["job"]) {
 
 
 if (document.title == html_page_titles["plan"]) {
+
     // duration of the formation is 6 months, 180 days
     training_length = 180
     const labs = [
@@ -97,7 +98,12 @@ if (document.title == html_page_titles["plan"]) {
     let progression_plus_we = progression.map(item => item > 5? (item+(Math.floor(item/5)*2)): item);
     let real_durations = progression_plus_we.map(item => (item%7)==0 ? item-2 : item);
 
-    const ctx = document.getElementById('daily_chart').getContext('2d');
+    // building the chart
+    canvas = document.getElementById("canvas-wrapper");
+    canvas.style.height = '70vh';
+    canvas.style.width = '80vw';
+
+    const ctx = document.getElementById('daily-chart').getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
@@ -114,17 +120,13 @@ if (document.title == html_page_titles["plan"]) {
             maintainAspectRatio: false,
             plugins: {
                 legend:{
-                    position: 'right',
+                    position: 'bottom',
+                    align: 'start',
                     labels: {
-                        font: {
-                            size: 16
-                        },
                         color: 'white'
                     },
   
-                    padding: {
-                        bottom: 10
-                    }
+                    padding: 10
                 },
                 title: {
                     display: true,
@@ -142,6 +144,10 @@ if (document.title == html_page_titles["plan"]) {
         }
     });
 
+    if (window.innerWidth > 701) {
+        myChart.options.plugins.legend.position = 'right';
+        myChart.options.plugins.legend.align = 'center';
+    }
 
     var next_monday = new Date();
     var next_monday_base =  (next_monday.getDate() + (((1 + 7 - next_monday.getDay()) % 7) || 7));
@@ -152,10 +158,10 @@ if (document.title == html_page_titles["plan"]) {
     var next_mon = document.getElementById("next_monday");
     next_mon.innerText = next_monday_string;
 
-    today_string = new Date().toLocaleDateString()
-    today = document.getElementById('today')
-    today.innerText = today_string
-    valid_monday = [next_monday_year, next_monday_month, next_monday_num].join("-")
+    today_string = new Date().toLocaleDateString();
+    today = document.getElementById('today');
+    today.innerText = today_string;
+    valid_monday = [next_monday_year, next_monday_month, next_monday_num].join("-");
     n = new Date(valid_monday);
     var ends = [];
 
@@ -170,21 +176,31 @@ if (document.title == html_page_titles["plan"]) {
         ends.push(week_days[(n.addDays(i)).getDay()] + " " + (n.addDays(i)).toLocaleDateString("fr-FR"))
     };
 
-    end_dates = document.getElementsByClassName('end-date')
+    end_dates = document.getElementsByClassName('end-date');
     for (i of end_dates) {
         i.innerText = ends[[...end_dates].indexOf(i)]
     };
 
-    theorical_end = document.getElementById('theorical-end')
-    theorical_end_obj = n.addDays(training_length)
-    theorical_end.innerText = theorical_end_obj.toLocaleDateString()
+    theorical_end = document.getElementById('theorical-end');
+    theorical_end_obj = n.addDays(training_length-1);
+    theorical_end.innerText = theorical_end_obj.toLocaleDateString();
     theorical_end.style.color = "red";
     theorical_end.style.fontWeight = "bold";
 
-    reliquat = document.getElementById('diff_theorical_needed')
-    reliquat_amount = 180 - (theor_durations.reduce((a,b) => a+ b, 0));
+    evaluated_end = document.getElementById('evaluated-end');
+    evaluated_end_obj = n.addDays(progression_plus_we.slice(-1)[0]-1);
+    evaluated_end.innerText = evaluated_end_obj.toLocaleDateString();
+    evaluated_end.style.color = "rgba(0, 256, 0, 1)";
+    evaluated_end.style.fontWeight = "bold";
+    
+
+
+    reliquat = document.getElementById('diff_theorical_needed');
+    reliquat_amount = 180 - progression_plus_we.slice(-1);
     reliquat.innerText = reliquat_amount;
     reliquat.style.color = "rgba(0,256,0,1)";
     reliquat.style.fontWeight = "bold";
+
+    console.log(window.innerWidth)
 
 }
