@@ -91,17 +91,7 @@
     margin-top: -5vh;
     z-index: 0;
   }
-  
-  .spinner {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 4px solid #222;
-    border-top-color: #009688;
-    -webkit-animation: 1s spin linear infinite;
-    animation: 1s spin linear infinite;
-  }
+
 
   #conclusion {
     background-color: rgba(0, 0, 0, 0.8);

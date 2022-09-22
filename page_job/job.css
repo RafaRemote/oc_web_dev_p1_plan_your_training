@@ -87,6 +87,35 @@ img {
   color: black;
 }
 
+#spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 4px solid white;
+  border-top-color: black;
+  margin-bottom: 1em;
+  -webkit-animation: 1s spin linear infinite;
+  animation: .5s spin linear infinite;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media only screen and (min-width: 768px) {
   body {
     width: 50vw;
