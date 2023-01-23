@@ -40,7 +40,11 @@ if (document.title == html_page_titles["job"]) {
             rate_euro_pln = data.rates['PLN']
             console.log("1 euro = ", rate_euro_pln, "złotych. source=https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR")
             fetch('https://www.service-public.fr/particuliers/vosdroits/F2300')
-            .then(res => res.text())
+            .then(
+                res => res.text(),
+                console.log(res)
+            )
+
             .then(html => {
                 var parser = new DOMParser()
                 var doc = parser.parseFromString(html, 'text/html')
