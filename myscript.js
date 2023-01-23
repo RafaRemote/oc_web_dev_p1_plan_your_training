@@ -50,15 +50,6 @@ if (document.title == html_page_titles["job"]) {
             document.getElementById("cannot_fetch").innerText = "contactez-nous"
         });
 
-    
-    fetch(url_wage)
-        .then(response => response.text(),console.log(response))
-        // .then(console.log(response))
-        .catch(err => {
-            console.error(err),
-            document.getElementById("cannot_fetch").innerText = "contactez-nous"
-        });
-
     fetch(url_wage)
         .then(response => response.text())
         .then(
@@ -70,7 +61,6 @@ if (document.title == html_page_titles["job"]) {
         )
         .catch(err => {console.warn('Something went wrong.', err)});
     }
-
 
 if (document.title == html_page_titles["plan"]) {
 
