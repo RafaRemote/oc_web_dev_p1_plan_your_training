@@ -34,13 +34,13 @@ if (document.title == html_page_titles["job"]) {
         }
     };
 
-    
+
     fetch('https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR', options)
         .then(response => response.json())
         .then((data) => {
             rate_euro_pln = data.rates['PLN']
             console.log("1 euro = ", rate_euro_pln, "złotych. source=https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR")
-            fetch('https://www.insee.fr/fr/statistiques/1375188')
+            fetch('https://www.insee.fr/fr/statistiques/1375188', {mode: 'no-cors'})
             .then(res => res.text())
             .then(html => {
                 var parser = new DOMParser()
