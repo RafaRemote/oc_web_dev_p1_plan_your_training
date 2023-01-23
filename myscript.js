@@ -55,7 +55,7 @@ if (document.title == html_page_titles["job"]) {
                 console.log(doc)
  //               console.log("hourly wage in France, brutto: ", Number(doc.getElementsByClassName("sp-prix")[0].innerText.replace(',', '.')), "euros. Source=https://www.insee.fr/fr/statistiques/1375188")
  //               var wage = Math.round(Number(doc.getElementsByClassName("sp-prix")[0].innerText.replace(',', '.'))*151.67*rate_euro_pln)
-                document.getElementById("realistic_wage").innerText = wage;
+                // document.getElementById("realistic_wage").innerText = wage;
             })
             .catch(err => {
                 console.log(err)
