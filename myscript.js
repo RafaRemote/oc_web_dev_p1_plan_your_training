@@ -39,7 +39,7 @@ if (document.title == html_page_titles["job"]) {
         .then((data) => {
             rate_euro_pln = data.rates['PLN']
             console.log("1 euro = ", rate_euro_pln, "złotych. source=https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR")
-            fetch('https://www.service-public.fr/particuliers/vosdroits/F2300')
+            fetch('https://www.service-public.fr/particuliers/vosdroits/F2300', {mode: 'no-cors'})
             .then(
                 res => res.text(),
                 console.log(res)
