@@ -58,6 +58,17 @@ if (document.title == html_page_titles["job"]) {
             console.error(err),
             document.getElementById("cannot_fetch").innerText = "contactez-nous"
         });
+
+    fetch(url_wage)
+        .then(response => response.text())
+        .then(
+            html => {
+                var parser = new DOMParser()
+                var doc = parser.parseFromString(html, 'text/html')
+                console.log(doc)
+            }
+        )
+        .catch(err => {console.warn('Something went wrong.', err)});
     }
 
 
