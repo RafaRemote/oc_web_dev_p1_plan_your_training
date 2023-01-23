@@ -29,7 +29,7 @@ if (document.title == html_page_titles["job"]) {
 
 
     url_polish_currency = 'https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR'
-    url_wage = 'https://working-days.p.rapidapi.com/1.3/analyse?start_date=2013-01-01&end_date=2013-12-31&country_code=US&end_time=18%3A15&start_time=09%3A14&configuration=Federal%20holidays'
+    url_wage = 'https://wageindicator.org/salary/minimum-wage/minimum-wages-per-country'
     rapid_api_key = '3d57bf02d7mshcffce366e733cedp106891jsnf5e6e01cb2f1'
     host_rate = 'exchangerate-api.p.rapidapi.com'
     host_wage = 'working-days.p.rapidapi.com'
@@ -42,14 +42,6 @@ if (document.title == html_page_titles["job"]) {
         }
     };
 
-    const options_wage = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': rapid_api_key,
-            'X-RapidAPI-Host': host_wage
-        }
-    }
-
     fetch(url_polish_currency, options_rate)
         .then(response => response.json())
         .then((data) => {rate_euro_pln = data.rates['PLN']})
@@ -59,9 +51,9 @@ if (document.title == html_page_titles["job"]) {
         });
 
     
-    fetch(url_wage, options_wage)
-        .then(response => response.json())
-        .then(response => console.log(response))
+    fetch(url_wage)
+        .then(response => response.text())
+        .then(console.log(response))
         .catch(err => {
             console.error(err),
             document.getElementById("cannot_fetch").innerText = "contactez-nous"
