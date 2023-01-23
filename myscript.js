@@ -59,7 +59,7 @@ if (document.title == html_page_titles["job"]) {
         });
 
     
-    fetch(url_wages, options_wage)
+    fetch(url_wage, options_wage)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => {
