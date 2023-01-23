@@ -37,12 +37,15 @@ if (document.title == html_page_titles["job"]) {
 
     url = 'https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR'
 
-    fetch(url, options, {mode: 'no-cors'})
+    fetch(url, options)
         .then(response => response.json())
         .then((data) => {
             rate_euro_pln = data.rates['PLN']
             console.log("1 euro = ", rate_euro_pln, "złotych. source=https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR")
-            fetch('https://mycompanyinfrance.urssaf.fr/documentation/SMIC?currentEngineId=1')
+
+            url_2 = 'https://mon-entreprise.urssaf.fr/documentation/SMIC/horaire'
+
+            fetch(url_2, {mode: 'no-cors'})
             .then(
                 res => res.text(),
             )
