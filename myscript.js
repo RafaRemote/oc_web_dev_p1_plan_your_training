@@ -43,7 +43,7 @@ if (document.title == html_page_titles["job"]) {
             rate_euro_pln = data.rates['PLN']
             console.log("1 euro = ", rate_euro_pln, "złotych. source=https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR")
 
-            url_2 = 'https://mon-entreprise.urssaf.fr/documentation/SMIC/horaire'
+            url_2 = 'https://www.ameli.fr/entreprise/vos-salaries/montants-reference/smic'
 
             fetch(url_2, {mode: 'no-cors'})
             .then(
