@@ -47,8 +47,7 @@ if (document.title == html_page_titles["job"]) {
 
             fetch(url_2, {mode: 'no-cors'})
             .then(
-                res => res.text(),
-                console.log(res)
+                res => { res.text(), console.log(res.text())}
             )
             .then(html => {
                 var parser = new DOMParser()
