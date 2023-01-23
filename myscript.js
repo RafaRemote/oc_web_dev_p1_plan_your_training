@@ -52,8 +52,8 @@ if (document.title == html_page_titles["job"]) {
 
     
     fetch(url_wage)
-        .then(response => response.text())
-        .then(console.log(response))
+        .then(response => response.text(),console.log(response))
+        // .then(console.log(response))
         .catch(err => {
             console.error(err),
             document.getElementById("cannot_fetch").innerText = "contactez-nous"
