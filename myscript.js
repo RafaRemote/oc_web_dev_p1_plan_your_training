@@ -27,46 +27,47 @@ if (document.getElementById("current_year_plus_one")) {
 
 if (document.title == html_page_titles["job"]) {
 
-    const options = {
+
+    url_polish_currency = 'https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR'
+    url_wages = 'https://working-days.p.rapidapi.com/1.3/analyse?start_date=2013-01-01&end_date=2013-12-31&country_code=US&end_time=18%3A15&start_time=09%3A14&configuration=Federal%20holidays'
+    rapid_api_key = '3d57bf02d7mshcffce366e733cedp106891jsnf5e6e01cb2f1'
+    host_rate = 'exchangerate-api.p.rapidapi.com'
+    host_wages = 'working-days.p.rapidapi.com'
+
+    const options_rate = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '3d57bf02d7mshcffce366e733cedp106891jsnf5e6e01cb2f1',
-            'X-RapidAPI-Host': 'exchangerate-api.p.rapidapi.com'
+            'X-RapidAPI-Key': rapid_api_key,
+            'X-RapidAPI-Host': host_rate
         }
     };
 
-    url = 'https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR'
+    const options_wage = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': rapid_api_key,
+            'X-RapidAPI-Host': host_wage
+        }
+    }
 
-    fetch(url, options)
+    fetch(url_polish_currency, options_rate)
         .then(response => response.json())
-        .then((data) => {
-            rate_euro_pln = data.rates['PLN']
-            console.log("1 euro = ", rate_euro_pln, "złotych. source=https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR")
-
-            url_2 = 'https://www.ameli.fr/entreprise/vos-salaries/montants-reference/smic'
-
-            fetch(url_2, {mode: 'no-cors'})
-            .then(
-                res => res.text()
-            )
-            .then(html => {
-                var parser = new DOMParser()
-                var doc = parser.parseFromString(html, 'text/html')
-                console.log(doc)
- //               console.log("hourly wage in France, brutto: ", Number(doc.getElementsByClassName("sp-prix")[0].innerText.replace(',', '.')), "euros. Source=https://www.insee.fr/fr/statistiques/1375188")
- //               var wage = Math.round(Number(doc.getElementsByClassName("sp-prix")[0].innerText.replace(',', '.'))*151.67*rate_euro_pln)
-                // document.getElementById("realistic_wage").innerText = wage;
-            })
-            .catch(err => {
-                console.log(err)
-                document.getElementById("cannot_fetch").innerText = "contactez-nous"
-            }
-                )
-            })
+        .then((data) => {rate_euro_pln = data.rates['PLN']})
         .catch(err => {
-            console.error(err)
+            console.error(err),
             document.getElementById("cannot_fetch").innerText = "contactez-nous"
         });
+
+    
+    fetch(url_wages, options_wage)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => {
+            console.error(err),
+            document.getElementById("cannot_fetch").innerText = "contactez-nous"
+        });
+    }
+
     }
 
 if (document.title == html_page_titles["plan"]) {
