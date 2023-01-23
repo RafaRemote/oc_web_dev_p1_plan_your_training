@@ -29,10 +29,10 @@ if (document.title == html_page_titles["job"]) {
 
 
     url_polish_currency = 'https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR'
-    url_wages = 'https://working-days.p.rapidapi.com/1.3/analyse?start_date=2013-01-01&end_date=2013-12-31&country_code=US&end_time=18%3A15&start_time=09%3A14&configuration=Federal%20holidays'
+    url_wage = 'https://working-days.p.rapidapi.com/1.3/analyse?start_date=2013-01-01&end_date=2013-12-31&country_code=US&end_time=18%3A15&start_time=09%3A14&configuration=Federal%20holidays'
     rapid_api_key = '3d57bf02d7mshcffce366e733cedp106891jsnf5e6e01cb2f1'
     host_rate = 'exchangerate-api.p.rapidapi.com'
-    host_wages = 'working-days.p.rapidapi.com'
+    host_wage = 'working-days.p.rapidapi.com'
 
     const options_rate = {
         method: 'GET',
@@ -68,7 +68,6 @@ if (document.title == html_page_titles["job"]) {
         });
     }
 
-    }
 
 if (document.title == html_page_titles["plan"]) {
 
