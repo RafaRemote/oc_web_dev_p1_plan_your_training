@@ -34,6 +34,7 @@ if (document.title == html_page_titles["job"]) {
         }
     };
 
+    
     fetch('https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR', options)
         .then(response => response.json())
         .then((data) => {
