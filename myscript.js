@@ -26,6 +26,7 @@ if (document.getElementById("current_year_plus_one")) {
 }
 
 if (document.title == html_page_titles["job"]) {
+
     const options = {
         method: 'GET',
         headers: {
@@ -34,7 +35,9 @@ if (document.title == html_page_titles["job"]) {
         }
     };
 
-    fetch('https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR', options)
+    url = 'https://exchangerate-api.p.rapidapi.com/rapid/latest/EUR'
+
+    fetch(url, options, {mode: 'no-cors'})
         .then(response => response.json())
         .then((data) => {
             rate_euro_pln = data.rates['PLN']
